@@ -3,6 +3,8 @@ const production = false;
 const webpack = require('webpack');
 const path = require('path');
 
+console.log(production ? 'Production Mode.' : 'Development Mode.');
+
 module.exports = {
   entry: './app/index.js',
 
@@ -47,9 +49,12 @@ module.exports = {
   },
 
   plugins: production ? [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin()
   ] : [],
 
   output: {
