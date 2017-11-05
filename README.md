@@ -21,6 +21,23 @@ Para um ambiente de produção:
 const production = true;
 ```
 
+# Scripts
+
+Iniciar o _webpack-dev-server_:
+```shell
+npm start
+```
+
+Gerar o _bundle.js_:
+```shell
+npm run build
+```
+
+Fazer com que o _webpack_ observe (_watch_) os arquivos:
+```shell
+npm run watch
+```
+
 ### Licença
 
-Este repositório e todo seu conteúdo está sob a Licença MIT.
+Este repositório e todo seu conteúdo está sob a [Licença MIT](https://github.com/lffg/webpack-ready/blob/master/LICENSE).
