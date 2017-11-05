@@ -21,7 +21,7 @@ Para um ambiente de produção:
 const production = true;
 ```
 
-# Scripts
+### Scripts
 
 Iniciar o _webpack-dev-server_:
 ```shell
